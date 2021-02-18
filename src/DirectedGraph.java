@@ -1,9 +1,7 @@
 /*
-@author Jiangqi Su, cssc0845
-        Jiaxi Chen cssc0870
- */
+@author Jiaxi Chen
+*/
 
-package edu.sdsu.cs.datastructures;
 
 import java.util.*;
 
@@ -12,7 +10,7 @@ public class DirectedGraph<V> implements IGraph<V> {
 
     private Map<V, Vertex> vertices = new TreeMap<>();
 
-    public class Vertex {
+    class Vertex {
         LinkedList<V> pointTo = new LinkedList<>();
         LinkedList<V> pointBy = new LinkedList<>();
     }

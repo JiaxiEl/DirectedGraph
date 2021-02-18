@@ -1,9 +1,7 @@
 /*
-@author Jiangqi Su, cssc0845
-        Jiaxi Chen cssc0870
+@author Jiaxi Chen
  */
 
-package edu.sdsu.cs.datastructures;
 
 import java.io.*;
 import java.util.*;
@@ -15,7 +13,7 @@ public class App {
         if (args.length != 0)
             fileName = args[args.length - 1];
         File file = new File(fileName);
-        IGraph<String> testGraph = new DirectedGraph();
+        IGraph<String> testGraph = new DirectedGraph<>();
 
         if (!file.exists()) {
             System.out.println("Error: Unable to open filename. Verify the file exists, is " +
@@ -24,9 +22,9 @@ public class App {
         }
 
         BufferedReader reader = new BufferedReader(new FileReader(fileName));
-        String readline = "";
+        String readline;
         while ((readline = reader.readLine()) != null) {
-            String temp[] = readline.split(",");
+            String [] temp = readline.split(",");
             if (!testGraph.contains(temp[0])) {
                 testGraph.add(temp[0]);
             } else if (temp.length > 1) {
